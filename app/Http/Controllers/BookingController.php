@@ -29,12 +29,17 @@ public function create()
         return view('bookings.create', compact('customers', 'buses',));
     }
 public function store(Request $request)
-{
-    $request->validate([
-        'customer_id' => 'required',    
-    ]);
-   
+{$request->validate([
+    'customer_id' => 'required',
+    'seat_number' => 'required',
+    
+]);
+
+
      Booking::create($request->all());
+     $seat = Seat::findOrFail($request->seat_number);
+     $seat->status = 'booked';
+     $seat->save();
 
     return redirect()->route('bookings.index')->with('success', 'Booking created successfully!');
 }
@@ -84,25 +89,24 @@ public function update(Request $request, $id)
 {
     $request->validate([
         'customer_id' => 'required',
-        'customer_name' => 'required',
-        'contact_number' => 'required',
-        'number' => 'required',
-        'source' => 'required',
-        'destination' => 'required',
         'seat_number' => 'required',
-        'cost' => 'required',
+        
     ]);
 
     $booking = Booking::findOrFail($id);
     $booking->update($request->all());
-
+    $seat = Seat::findOrFail($request->seat_number);
+    $seat->status = 'booked';
+    $seat->save();
     return redirect()->route('bookings.index')->with('success', 'Booking updated successfully!');
 }
 public function destroy($id)
 {
     $booking = Booking::findOrFail($id);
     $booking->delete();
-
+    $seat = Seat::findOrFail($booking->seat_id);
+    $seat->status = 'available';
+    $seat->save();
     return redirect()->route('bookings.index')->with('success', 'Booking deleted successfully!');
 }
 public function show($id)

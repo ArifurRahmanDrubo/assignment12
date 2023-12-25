@@ -27,7 +27,7 @@
   <link href="{{ asset('assets/css')}}/app.min.css" rel="stylesheet" type="text/css" />
   <!-- custom Css-->
   <link href="{{ asset('assets/css')}}/custom.min.css" rel="stylesheet" type="text/css" />
-
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
@@ -76,10 +76,25 @@
 
     <!-- ============================================================== -->
     <!-- Start right Content here -->
+    
     <!-- ============================================================== -->
     <div class="main-content">
       @yield('content')
-      
+      @yield('buses-create')
+      @yield('buses-edit')
+      @yield('buses-index')
+      @yield('booking-create')
+      @yield('booking-edit')    
+      @yield('booking-index')
+      @yield('customer-create')
+      @yield('customer-edit')
+      @yield('customer-index')
+      @yield('route-create')
+      @yield('route-edit')
+      @yield('route-index')
+      @yield('seat-index')
+      @yield('seat-create')
+      @yield('seat-edit')
       @include('components.footer')
     </div>
     <!-- end main content-->

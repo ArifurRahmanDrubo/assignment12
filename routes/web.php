@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\dashboard;
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SeatController;
 use App\Http\Controllers\BusesController;
@@ -24,7 +25,7 @@ Route::group(['prefix' => 'admin'], function(){
 
     Route::get('/home', [dashboard::class, 'home']) ->name('home');
 });
-Route::get('/home', [dashboard::class, 'home']) ->name('home');
+Route::get('/home', [DashboardController::class, 'home']) ->name('home');
 Route::get('/buses', [BusesController::class, 'index'])->name('buses.index');
 Route::get('/buses/create', [BusesController::class, 'create'])->name('buses.create');
 Route::post('/buses', [BusesController::class, 'store'])->name('buses.store');

@@ -21,19 +21,15 @@
                               Total seat
                             </p>
                           </div>
-                          <div class="flex-shrink-0">
-                            <h5 class="text-success fs-14 mb-0">
-                              <i class="ri-arrow-right-up-line fs-13 align-middle"></i>
-                              +16.24 %
-                            </h5>
-                          </div>
+                          
                         </div>
                         <div class="d-flex align-items-end justify-content-between mt-4">
                           <div>
                             <h4 class="fs-22 fw-semibold ff-secondary mb-4">
-                              $<span class="counter-value" data-target="559.25">0</span>k
+                              <span class="counter-value" data-target=" {{ $totalSeats }}"> {{ $totalSeats }}</span>
+                             
                             </h4>
-                            <a href="#" class="link-secondary text-decoration-underline">View net earnings</a>
+                            <a href="{{ route('seats.index') }}" class="link-secondary text-decoration-underline">View All</a>
                           </div>
                           <div class="avatar-sm flex-shrink-0">
                             <span class="avatar-title bg-primary-subtle rounded fs-3">
@@ -58,23 +54,18 @@
                               Buse
                             </p>
                           </div>
-                          <div class="flex-shrink-0">
-                            <h5 class="text-danger fs-14 mb-0">
-                              <i class="ri-arrow-right-down-line fs-13 align-middle"></i>
-                              -3.57 %
-                            </h5>
-                          </div>
+                          
                         </div>
                         <div class="d-flex align-items-end justify-content-between mt-4">
                           <div>
                             <h4 class="fs-22 fw-semibold ff-secondary mb-4">
-                              <span class="counter-value" data-target="36894">0</span>
+                              <span class="counter-value" data-target="{{ $totalBuses }}">{{ $totalBuses }}</span>
                             </h4>
-                            <a href="#" class="link-secondary text-decoration-underline">View all orders</a>
+                            <a href="{{ route('buses.index') }}" class="link-secondary text-decoration-underline">View all </a>
                           </div>
                           <div class="avatar-sm flex-shrink-0">
                             <span class="avatar-title bg-primary-subtle rounded fs-3">
-                              <i class="bx bx-shopping-bag text-primary"></i>
+                              <i class="bx bx-bus text-primary"></i>
                             </span>
                           </div>
                         </div>
@@ -92,60 +83,55 @@
                         <div class="d-flex align-items-center">
                           <div class="flex-grow-1 overflow-hidden">
                             <p class="text-uppercase fw-medium text-muted text-truncate mb-0">
-                              Customers
+                              Available Seats
                             </p>
                           </div>
-                          <div class="flex-shrink-0">
-                            <h5 class="text-success fs-14 mb-0">
-                              <i class="ri-arrow-right-up-line fs-13 align-middle"></i>
-                              +29.08 %
-                            </h5>
-                          </div>
+                          
                         </div>
                         <div class="d-flex align-items-end justify-content-between mt-4">
                           <div>
                             <h4 class="fs-22 fw-semibold ff-secondary mb-4">
-                              <span class="counter-value" data-target="183.35">0</span>M
+                              <span class="counter-value" data-target="{{ $availableSeats }}">{{ $availableSeats }}</span>
+                              
                             </h4>
-                            <a href="#" class="link-secondary text-decoration-underline">See details</a>
+                            <a href="{{ route('seats.index') }}" class="link-secondary text-decoration-underline">See details</a>
+                          </div>
+                          <div class="avatar-sm flex-shrink-0">
+                            <span class="avatar-title bg-primary-subtle rounded fs-3">
+                              <i class="bx bx-chair text-primary"></i>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- end card body -->
+                    </div>
+                    <!-- end card -->
+                  </div>
+                  <!-- end col -->
+
+                  <div class="col-xl-3 col-md-6">
+                    <!-- card -->
+                    <div class="card card-animate">
+                      <div class="card-body">
+                        <div class="d-flex align-items-center">
+                          <div class="flex-grow-1 overflow-hidden">
+                            <p class="text-uppercase fw-medium text-muted text-truncate mb-0">
+                            Total  Customer
+                            </p>
+                          </div>
+                          
+                        </div>
+                        <div class="d-flex align-items-end justify-content-between mt-4">
+                          <div>
+                            <h4 class="fs-22 fw-semibold ff-secondary mb-4">
+                              <span class="counter-value" data-target=" {{ $totalCustomers }}"> {{ $totalCustomers }}</span>
+                             
+                            </h4>
+                            <a href="{{ route('customers.index')" class="link-secondary text-decoration-underline">Se details</a>
                           </div>
                           <div class="avatar-sm flex-shrink-0">
                             <span class="avatar-title bg-primary-subtle rounded fs-3">
                               <i class="bx bx-user-circle text-primary"></i>
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- end card body -->
-                    </div>
-                    <!-- end card -->
-                  </div>
-                  <!-- end col -->
-
-                  <div class="col-xl-3 col-md-6">
-                    <!-- card -->
-                    <div class="card card-animate">
-                      <div class="card-body">
-                        <div class="d-flex align-items-center">
-                          <div class="flex-grow-1 overflow-hidden">
-                            <p class="text-uppercase fw-medium text-muted text-truncate mb-0">
-                              My Balance
-                            </p>
-                          </div>
-                          <div class="flex-shrink-0">
-                            <h5 class="text-muted fs-14 mb-0">+0.00 %</h5>
-                          </div>
-                        </div>
-                        <div class="d-flex align-items-end justify-content-between mt-4">
-                          <div>
-                            <h4 class="fs-22 fw-semibold ff-secondary mb-4">
-                              $<span class="counter-value" data-target="165.89">0</span>k
-                            </h4>
-                            <a href="#" class="link-secondary text-decoration-underline">Withdraw money</a>
-                          </div>
-                          <div class="avatar-sm flex-shrink-0">
-                            <span class="avatar-title bg-primary-subtle rounded fs-3">
-                              <i class="bx bx-wallet text-primary"></i>
                             </span>
                           </div>
                         </div>

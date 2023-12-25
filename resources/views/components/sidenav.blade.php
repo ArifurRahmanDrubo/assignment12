@@ -31,38 +31,38 @@
                 <li class="menu-title"><span data-key="t-menu">Menu</span></li>
                 <li class="nav-item {{ Request::is('dashboard*') ? 'active' : '' }}">
                     <a class="nav-link menu-link" href="{{ route('home') }}">
-                        <i data-feather="home" class="icon-dual"></i>
+                        <i data-feather="home" class="icn-dual"></i>
                         <span data-key="t-dashboards">Dashboards</span>
                     </a>
                 </li>
                 <li class="nav-item {{ Request::is('buses*') ? 'active' : '' }}">
                     <a class="nav-link menu-link" href="{{ route('buses.index') }}">
-                        <i data-feather="bus" class="icon-dual"></i>
+                      <i class="bx bx-bus "></i>
                         <span data-key="t-buses">Buses</span>
                     </a>
                 </li>
                 <li class="nav-item {{ Request::is('routes*') ? 'active' : '' }}">
                     <a class="nav-link menu-link" href="{{ route('routes.index') }}">
-                        <i data-feather="map" class="icon-dual"></i>
+                      <i class="bx bx-map "></i>
                         <span data-key="t-routes">Routes</span>
                     </a>
                 </li>
                 <li class="nav-item {{ Request::is('customers*') ? 'active' : '' }}">
                   <a class="nav-link menu-link" href="{{ route('customers.index') }}">
-                      <i data-feather="map" class="icon-dual"></i>
+                    <i class="bx bx-user "></i>
                       <span data-key="t-routes">Customers</span>
                   </a>
               </li>
               <li class="nav-item {{ Request::is('seats*') ? 'active' : '' }}">
                 <a class="nav-link menu-link" href="{{ route('seats.index') }}">
-                    <i data-feather="book" class="icon-dual"></i>
+                  <i class="bx bx-chair "></i>
                     <span data-key="t-bookings">Seats</span>
                 </a>
             </li>
             
                 <li class="nav-item {{ Request::is('bookings*') ? 'active' : '' }}">
                     <a class="nav-link menu-link" href="{{ route('bookings.index') }}">
-                        <i data-feather="book" class="icon-dual"></i>
+                      <i class="bx bx-check-circle "></i>
                         <span data-key="t-bookings">Bookings</span>
                     </a>
                 </li>
